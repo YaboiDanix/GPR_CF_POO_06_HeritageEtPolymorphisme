@@ -10,13 +10,10 @@ class Melee : public Weapon {
   public:
 
   Melee(std::string name, int damage, float weight, float bladeLength);
-  void Swing();
-  const std::string& name() const { return name_; }
+   void Fire();
+   void Swing();
 
   protected:
-  std::string name_;
-  int damage_;
-  float weight_;
   float bladeLength_;
 
 };

@@ -24,9 +24,6 @@ void Firearm::Fire() {
     return;
   }
   --ammo_;
-  std::println("{} : un projectile, {} degats. ({}/{})", name_, damage_, ammo_,
-               magazine_capacity_);
-
 }
 
 bool Firearm::CanFire() const { return ammo_ > 0; }

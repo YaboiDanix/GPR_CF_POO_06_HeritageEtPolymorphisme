@@ -6,10 +6,11 @@
 
 #include <print>
 Melee::Melee(std::string name, int damage, float weight, float bladeLength)
-  :Weapon(std::move(name), damage, weight),
+  :Weapon(name, damage, weight),
   bladeLength_(bladeLength) {}
-
+void Melee::Fire() {
+  std::println("un swing de {} : {} degats", name_, damage_);
+}
 void Melee::Swing() {
-  std::println("un Swing de {}", name_);
 Fire();
 }

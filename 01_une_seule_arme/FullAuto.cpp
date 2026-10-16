@@ -20,4 +20,7 @@ void FullAuto::FireFullAuto() {
   for (int i = 0; i < burstLength_; i++) {
     Fire();
   }
-  }
+  std::println("{} : {} projectile, {} degats. ({}/{})", name_,  burstLength_, damage_*burstLength_,ammo_,
+              magazine_capacity_);
+}
+

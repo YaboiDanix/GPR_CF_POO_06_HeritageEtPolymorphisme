@@ -10,7 +10,7 @@ class Weapon {
  public:
 
   Weapon(std::string name, int damage, float weight);
-  virtual void Fire();
+  virtual void Fire() = 0;
   const std::string& name() const { return name_; }
 
  protected:

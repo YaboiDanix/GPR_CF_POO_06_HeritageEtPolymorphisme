@@ -3,6 +3,8 @@
 
 #include "SemiAutomatic.h"
 
+#include <print>
+
 SemiAutomatic::SemiAutomatic(std::string name, std::string caliber, int damage,
                              float weight, int magazine_capacity)
     : Firearm(std::move(name), std::move(caliber), damage, weight,
@@ -11,4 +13,6 @@ SemiAutomatic::SemiAutomatic(std::string name, std::string caliber, int damage,
   void SemiAutomatic::SingleShotMode()
 {
   Fire();
+  std::println("{} : un projectile, {} degats. ({}/{})", name_, damage_, ammo_,
+               magazine_capacity_);
 }
