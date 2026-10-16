@@ -6,14 +6,16 @@
 #ifndef GPR_CF_POO_06_HERITAGEETPOLYMORPHISME_FIREARM_H
 #define GPR_CF_POO_06_HERITAGEETPOLYMORPHISME_FIREARM_H
 class Firearm : public Weapon {
+
 public:
   Firearm(std::string name, std::string caliber ,int damage, float weight, int magazine_capacity);
   void Reload();
   void Fire() override;
   bool CanFire() const;
-  const std::string& name() const { return name_; }
-  int ammo() const override { return ammo_; }
-  int magazine_capacity() const override { return magazine_capacity_; }
+  virtual const std::string& name() const { return name_; }
+  virtual int ammo() const { return ammo_; }
+  virtual int magazine_capacity() const { return magazine_capacity_; }
+
 protected:
   std::string caliber_;
   std::string name_;

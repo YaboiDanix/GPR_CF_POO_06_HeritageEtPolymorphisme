@@ -1,6 +1,6 @@
 #include <iostream>
 #include <print>
-
+#include "FullAuto.h"
 #include "SemiAutomatic.h"
 #include "firearm.h"
 #include "weapon.h"
@@ -31,12 +31,12 @@ int main() {
       std::println("Touche inconnue.");
     }
   }
-  Firearm Assaultrifle("AR 90","5", 30, 5.2f, 20);
+  FullAuto Assaultrifle("AR 90","5", 30, 5.2f, 20,5);
 
   std::println("--- STAND DE TIR ---");
   while (true) {
     std::println("");
-    std::println("  1  {}  {}/{}", Assaultrifle.name(), Assaultrifle.ammo(),
+    std::println("  2  {}  {}/{}", Assaultrifle.name(), Assaultrifle.ammo(),
                  Assaultrifle.magazine_capacity());
     std::println("  r  recharger    q  quitter");
     std::print("> ");
@@ -48,7 +48,7 @@ int main() {
     if (choix == 'r') {
       Assaultrifle.Reload();
     } else if (choix == '1') {
-      Assaultrifle.Fire();
+      Assaultrifle.FireFullAuto();
     } else {
       std::println("Touche inconnue.");
     }

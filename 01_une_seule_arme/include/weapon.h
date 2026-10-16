@@ -17,8 +17,8 @@ class Weapon {
 
  protected:
   std::string name_;
-  int damage_ = 0;
-  float weight_ = 0.0f;
+  int damage_;
+  float weight_ ;
   int magazine_capacity_ = 0;
   int ammo_ = 0;
 };
