@@ -7,8 +7,7 @@
 #define GPR_CF_POO_06_HERITAGEETPOLYMORPHISME_FIREARM_H
 class Firearm : public Weapon {
 public:
-  Firearm(std::string name, std::string caliber, int damage , float weight,int magazine_capacity);
-
+  Firearm(std::string name, std::string caliber ,int damage, float weight, int magazine_capacity);
   void Reload();
   void Fire() override;
   bool CanFire() const;

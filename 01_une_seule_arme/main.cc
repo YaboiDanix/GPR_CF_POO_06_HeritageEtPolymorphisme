@@ -1,6 +1,7 @@
 #include <iostream>
 #include <print>
 
+#include "SemiAutomatic.h"
 #include "firearm.h"
 #include "weapon.h"
 
@@ -8,7 +9,7 @@
 // A vous de lui en donner cinq, de cinq types differents, sans qu'il ait a
 // savoir laquelle il tient.
 int main() {
-  Firearm pistolet("Pistolet","9mm", 24, 1.1f, 12);
+  SemiAutomatic pistolet("Pistolet","9mm", 24, 1.1f, 12);
 
   std::println("--- STAND DE TIR ---");
   while (true) {
@@ -29,13 +30,14 @@ int main() {
     } else {
       std::println("Touche inconnue.");
     }
-  }  Firearm pistolet2("Pistolet","3", 24, 1.1f, 12);
+  }
+  Firearm Assaultrifle("AR 90","5", 30, 5.2f, 20);
 
   std::println("--- STAND DE TIR ---");
   while (true) {
     std::println("");
-    std::println("  1  {}  {}/{}", pistolet2.name(), pistolet2.ammo(),
-                 pistolet2.magazine_capacity());
+    std::println("  1  {}  {}/{}", Assaultrifle.name(), Assaultrifle.ammo(),
+                 Assaultrifle.magazine_capacity());
     std::println("  r  recharger    q  quitter");
     std::print("> ");
 
@@ -44,13 +46,14 @@ int main() {
 
     if (choix == 'q') break;
     if (choix == 'r') {
-      pistolet2.Reload();
+      Assaultrifle.Reload();
     } else if (choix == '1') {
-      pistolet2.Fire();
+      Assaultrifle.Fire();
     } else {
       std::println("Touche inconnue.");
     }
-  }  Firearm pistolet3("Pistolet","4", 24, 1.1f, 12);
+  }
+  SemiAutomatic pistolet3("Pistolet","4", 24, 1.1f, 12);
 
   std::println("--- STAND DE TIR ---");
   while (true) {

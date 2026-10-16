@@ -7,10 +7,8 @@
 #include <print>
 Firearm::Firearm(std::string name, std::string caliber, int damage,
                  float weight, int magazine_capacity)
-    : name_(name),
-      caliber_(caliber),
-      damage_(damage),
-      weight_(weight),
+    : Weapon(std::move(name), damage, weight),
+      caliber_(std::move(caliber)),
       magazine_capacity_(magazine_capacity),
       ammo_(magazine_capacity) {}
 

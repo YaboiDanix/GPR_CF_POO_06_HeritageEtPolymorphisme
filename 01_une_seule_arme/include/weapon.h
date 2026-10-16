@@ -7,6 +7,8 @@
 // tir n'en connait qu'une, et Fire() sait faire une seule chose.
 class Weapon {
  public:
+  Weapon(std::string name, int damage, float weight);
+
   virtual void Fire() = 0;
 
   const std::string& name() const { return name_; }
