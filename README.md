@@ -23,7 +23,7 @@ Ajoutez une deuxième arme. Puis une troisième. Au bout de deux copier-coller, 
 hiérarchie s'impose — c'est le sujet de la séance.
 
 L'énoncé complet est dans le vault :
-`01 courses/projects/C++/Formative - OOP - L'armurerie.md`.
+`01 courses/exercises/C++/GPR-CF-POO-06 - Héritage et polymorphisme - Formative.md`.
 
 ## Conventions
 
