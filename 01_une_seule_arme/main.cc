@@ -2,8 +2,7 @@
 #include <print>
 #include "FullAuto.h"
 #include "SemiAutomatic.h"
-#include "firearm.h"
-#include "weapon.h"
+#include "melee.h"
 
 // Le stand de tir. Il ne connait qu'une arme, et il l'appelle directement.
 // A vous de lui en donner cinq, de cinq types differents, sans qu'il ait a
@@ -53,24 +52,23 @@ int main() {
       std::println("Touche inconnue.");
     }
   }
-  SemiAutomatic pistolet3("Pistolet","4", 24, 1.1f, 12);
+  Melee epee("sword", 20, 1.1f, 12);
 
   std::println("--- STAND DE TIR ---");
   while (true) {
     std::println("");
-    std::println("  1  {}  {}/{}", pistolet3.name(), pistolet3.ammo(),
-                 pistolet3.magazine_capacity());
-    std::println("  r  recharger    q  quitter");
+    std::println("  3  {}  ", epee.name());
+    std::println(" q  quitter");
     std::print("> ");
 
     char choix = 0;
     if (!(std::cin >> choix)) break;
 
-    if (choix == 'q') break;
-    if (choix == 'r') {
-      pistolet3.Reload();
-    } else if (choix == '1') {
-      pistolet3.Fire();
+    if (choix == 'q') {
+      break;
+    }
+    if (choix == '1') {
+      epee.Swing();
     } else {
       std::println("Touche inconnue.");
     }
